@@ -14,8 +14,8 @@ module.exports = {
     name: `김지연`,
     bio: {
       role: `개발자`,
-      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
-      thumbnail: 'sample.png', // Path to the image in the 'asset' folder
+      description: ['Fast Learner 🏃🏻‍♀️', '배움을 즐거워하는', '재미있게 일하는'],
+      thumbnail: 'me.png', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/jiyaaany`,
@@ -43,12 +43,39 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        date: '2021.02 ~',
-        activity: '개인 블로그 개발 및 운영',
+        date: '2021.07 ~ ',
+        activity: '(주)쿠캣 재직중',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
-          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
-          demo: 'https://www.zoomkoding.com',
+          post: '',
+          github: '',
+          demo: '',
+        },
+      },
+      {
+        date: '2020.06 ~ 2021.07',
+        activity: '(주)게임원커뮤니케이션주 재직',
+        links: {
+          post: '',
+          github: '',
+          demo: '',
+        },
+      },
+      {
+        date: '2018.11 ~ 2020.05',
+        activity: '(주)코비젼 재직',
+        links: {
+          post: '',
+          github: '',
+          demo: '',
+        },
+      },
+      {
+        date: '~ 2019.01',
+        activity: '미림여자정보과학고등학교 졸업',
+        links: {
+          post: '',
+          github: '',
+          demo: '',
         },
       },
     ],
@@ -72,15 +99,27 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        title: '개발 블로그 테마 개발',
+        title: '칠텐 프로덕트 개발 🎳',
         description:
-          '개발 블로그를 운영하는 기간이 조금씩 늘어나고 점점 많은 생각과 경험이 블로그에 쌓아가면서 제 이야기를 담고 있는 블로그를 직접 만들어보고 싶게 되었습니다. 그동안 여러 개발 블로그를 보면서 좋았던 부분과 불편했던 부분들을 바탕으로 레퍼런스를 참고하여 직접 블로그 테마를 만들게 되었습니다.',
-        techStack: ['gatsby', 'react'],
-        thumbnailUrl: 'blog.png',
+          '볼러들을 위한 볼링 기록 플랫폼 칠텐 어플리케이션을 개발했습니다. 주요 기능으로는 모임 관리와 게임 기록, 볼러들의 커뮤니티를 제공하고 있습니다.',
+        techStack: ['Codeigniter', 'PHP', 'Vue.js'],
+        thumbnailUrl: 'chilten.png',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
-          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
-          demo: 'https://www.zoomkoding.com',
+          post: '',
+          github: 'https://jiyaaany.notion.site/1560423e310d4683a20576c69895ab78',
+          demo: 'https://www.chilten.com/',
+        },
+      },
+      {
+        title: '게임원 프로덕트 개발 ⚾️',
+        description:
+          '사회인 야구인을 위한 기록 플랫폼으로, 리그, 팀, 선수 관리 기능을 제공하는 서비스입니다.',
+        techStack: ['Codeigniter', 'PHP'],
+        thumbnailUrl: 'gameone.png',
+        links: {
+          post: '',
+          github: 'https://jiyaaany.notion.site/636ef793d73440e985ee82bdd780941a',
+          demo: 'http://www.gameone.kr/',
         },
       },
     ],
