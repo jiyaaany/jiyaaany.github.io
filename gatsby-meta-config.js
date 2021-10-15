@@ -14,7 +14,7 @@ module.exports = {
     name: `김지연`,
     bio: {
       role: `개발자`,
-      description: ['Fast Learner 🏃🏻‍♀️', '배움을 즐거워하는', '재미있게 일하는'],
+      description: ['Fast Learner 🏃🏻‍♀️', '좋은 코드를 고민하는', '배움을 즐거워하는', '재미있게 일하는'],
       thumbnail: 'me.png', // Path to the image in the 'asset' folder
     },
     social: {
