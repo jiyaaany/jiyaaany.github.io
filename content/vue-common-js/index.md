@@ -32,8 +32,14 @@ MyPlugin.install = (Vue) => {
 ```typescript
 this.$getBlabla()
 ```
+타입스크립트를 사용하지 않는 Nuxt 환경이라면 [다음](https://nuxtjs.org/docs/directory-structure/plugins/#inject-in-root--context) 방법도 가능하다. Nuxt에서 제공하는 `inject` 함수를 사용하는 건데 예제 코드는 아래를 참고하면 된다.
+```javascript
+export default ({ app }, inject) => {
+  inject('getBlabla', msg => console.log(`blabla ${msg}!`))
+}
+```
 
-위 방법대로 시도하다보니 Typescript의 벽에 부딪혔다. 파라미터로 받아오는 Vue에 대한 타입을 지정하라고 하는데 `any`는 절대 쓰기 싫어서 ,, 다른 방법을 찾아보았다.
+내가 위 방법대로 시도하다보니 Typescript의 벽에 부딪혔다. 파라미터로 받아오는 Vue에 대한 타입을 지정하라고 하는데 `any`는 절대 쓰기 싫어서 ,, 다른 방법을 찾아보았다.
 ![img.png](img.png)
 
 [Nuxt Typescript](https://typescript.nuxtjs.org/cookbook/plugins/) 공식 문서에서 plugins를 등록하는 가이드를 찾을 수 있었고 결과를 미리 말하자면 이 방법으로 성공했다 !! 💪🏻 **Vue 인스턴스에 주입하는 방법**과 **context에 주입하는 방법**이 있는데 공통 함수를 등록하는 경우엔 Vue 인스턴스에 주입해도 된다고 생각해서 첫 번째 방법으로 진행했다.
