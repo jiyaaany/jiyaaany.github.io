@@ -1,11 +1,12 @@
 ---
-emoji:📱
+emoji: 📱
 title: React Native 환경 셋팅과 트러블 슈팅
 date: '2021-10-21 18:47:00'
 author: 지걸
 tags: react-native typescript
 categories: experience
 ---
+
 # 환경세팅
 ## 설치
 ```
