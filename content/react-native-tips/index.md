@@ -168,3 +168,5 @@ yst --reset-cache
 <key>CFBundleDisplayName</key>
 <string>{APP_NAME}</string>
 ```
+
+# `React.FC` VS `React`

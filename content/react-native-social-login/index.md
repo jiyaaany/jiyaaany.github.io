@@ -100,7 +100,7 @@ Xcode에서 Project => Targets 아래 선택 후 General 탭으로 이동하여 
 [링크](https://developers.kakao.com/docs/latest/ko/getting-started/sdk-android-v1#key-hash) 를 통해 키 해시등록을 진행합니다. 디버그, 릴리즈 키 해시 값을 등록하는 방법은 다음과 같습니다.
 1. 운영체제에 따른 명령어를 통해 키 해시를 생성
 2. [내 애플리케이션] > [플랫폼] > [Android 플랫폼 등록]
-3. [키 해시] 항목에서 생성한 키 해시를 입력 후 저장
+3. [키 해시] 항목에서 생성한 키 해시를 입력 후 저장  
 ![img_3.png](img_3.png)
 
 #### 디버그 키 해시
