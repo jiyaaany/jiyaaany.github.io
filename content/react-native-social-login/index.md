@@ -65,6 +65,9 @@ npx pod-install
 [패키지 공식문서](https://github.com/react-native-seoul/react-native-kakao-login) `README.MD`에 소개된 것처럼 위 링크를 통해 `Swift Bridging Header`를 추가합니다.
 먼저 Xcode에서 `프로젝트 디렉토리/ios` 경로를 열어줍니다. (로딩하는데 한 세월 걸림..)
 
+Bridging Header 섹션이 없을 경우, 프로젝트 경로 아래 Swift 파일 하나 생성해주면 아래와 같은 모달이 뜨면서 Bridging Header을 생성할 수 있다.
+![img_5.png](img_5.png)
+
 ### `AppDelegate.m`
 다음으론 카카오톡 앱이 깔려있을 경우 올바른 데이터를 받아오기 위해 `AppDelegate.m` 파일에 아래 내용을 추가해줍니다. 
 ```
@@ -82,6 +85,7 @@ npx pod-install
  return NO;
 }
 
+// optional
 dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
       dispatch_async(dispatch_get_main_queue(), ^(void){
         if ([RNKakaoLogins isKakaoTalkLoginUrl:url]) {
@@ -94,6 +98,7 @@ dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
 ### Bundle Identifier 확인
 Xcode에서 Project => Targets 아래 선택 후 General 탭으로 이동하여 Bundle Identifier가 본인의 카카오 앱과 동일한지 확인합니다.
 ![img_4.png](img_4.png)
+![img_6.png](img_6.png)
 
 ## Android
 ### 키 해시(Key Hash) 등록

@@ -33,6 +33,16 @@ Atom는 디버깅, 지속성 및 모든 atoms의 map을 볼 수 있는 특정 �
 ```javascript
 const [fontSize, setFontSize] = useRecoilState(fontSizeState);
 ```
+
+#### 추가설명
+`atom()`함수는 쓰기 가능한 `RecoilState` 객체를 반환한다. [자세한 설명](https://recoiljs.org/ko/docs/api-reference/core/atom/)  
+**atom과 상호작용하기 위해 자주 사용되는 Hooks**
+- `useRecoilState()`: atom을 읽고 쓰려고 할 때 사용하는 Hook
+- `useRecoilValue()`: atom을 읽기만 할 때 사용하는 Hook
+- `useSetRecoilState()`: atom에 쓰려고만 할 때 사용하는 Hook
+- `useResetRecoilState()`: atom을 초기값으로 초기화할 때 사용하는 Hook
+
+
 ### Selectors
 **Selector**는 atoms나 다른 selectors를 입력으로 받아들이는 순수 함수(pure function)다. 상위의 atoms, selectors가 업데이트되면 하위의 selector 함수도 다시 실행된다. 컴포넌트들은 selectors를 atoms처럼 구독할 수 있으며 selectors가 변경되면 컴포넌트들도 다시 렌더링 된다.  
 Selectors는 상태를 기반으로 파생되는 데이터를 계산하는데에 사용된다. 최소한의 상태 집합만 atoms에 저장하고 다른 파생 데이터는 selectors에 명시된 함수를 통해 계산함으로써 쓸모없는 상태의 보존을 방지한다.  
