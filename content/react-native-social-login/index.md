@@ -96,8 +96,9 @@ dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
 ```
 
 ### Bundle Identifier 확인
-Xcode에서 Project => Targets 아래 선택 후 General 탭으로 이동하여 Bundle Identifier가 본인의 카카오 앱과 동일한지 확인합니다.
+Xcode에서 Project => Targets 아래 선택 후 General 탭으로 이동하여 Bundle Identifier가 본인의 카카오 앱의 번들ID와 동일한지 확인합니다.
 ![img_4.png](img_4.png)
+![img_5.png](img_5.png)
 ![img_6.png](img_6.png)
 
 ## Android
