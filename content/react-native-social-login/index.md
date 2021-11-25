@@ -176,4 +176,87 @@ android:allowBackup="true"
 [google-signin](https://github.com/react-native-google-signin/google-signin) 패키지를 설치합니다.
 ```
 yarn add @react-native-google-signin/google-signin
+
+# and
+
+npx pod-install
 ```
+
+## Android 설정
+Firebase를 사용하지 않는다면 [Configure a Google API Project](https://developers.google.com/identity/sign-in/android/start#configure-a-google-api-project) 가이드를 따라 설정을 진행합니다.  
+1. 아래 프로젝트 구성 버튼을 클릭해 대상 프로젝트를 선택해줍니다.
+![img_6.png](img_6.png)
+2. 패키지명과 키스토어 SHA-1 값을 입력해줍니다.  
+![img_7.png](img_7.png)  
+패키지명은 `Androidmanifest.xml` 파일에서 참조하면 되고, SHA-1 값은 위 명령어를 통해 찾아낼 수 있다.
+3. `build.gradle` 파일 수정
+```
+ext {
+    ...
+    googlePlayServicesAuthVersion = "19.2.0"
+}
+dependencies {
+    ...
+    classpath 'com.google.gms:google-services:4.3.10'
+}
+repositories {
+    google()
+}
+```
+4. `android/app/build.gradle` 파일 수정  
+가장 아래에 추가
+```
+apply plugin: 'com.google.gms.google-services'
+```
+
+## iOS 설정
+1. 앱 등록
+Xcode에서 확인한 번들 ID를 입력해줍니다.
+2. 구성 파일 다운로드
+`GoogleService-Info.plist` 파일을 다운받아 Xcode 프로젝트 루트 경로에 추가합니다.
+3. Firebase SDK 추가  
+3-1. Xcode 프로젝트를 연 후 File(파일) > Swift Package > Add Package Dependency 이동  
+3-2. 메시지가 표시되면 Filebase iOS SDK 저장소 URL을 입력  
+3-3. 사용할 SDK 버전 선택  
+3-4. 사용할 Firebase 라이브러리 선택
+![img_12.png](img_12.png)
+
+7. 클라이언트 ID 만들기
+![img_8.png](img_8.png)
+* Bundle ID는 Android에서 사용했던 Bundle Identifier 값을 사용하면 됩니다.  
+![img_9.png](img_9.png)
+2. 생성된 혹은 기존에 사용하던 클라이언트 ID를 URL Schemes에 지정  
+URL Schemes에 클라이언트 ID를 역으로 입력합니다.
+```
+eg.
+Client Id: 123123.blabla.com
+URL Schemes: com.blabla.123123
+```
+
+# 네이버
+## 패키지 설치
+```
+yarn add @react-native-seoul/naver-login
+
+npx pod-install
+```
+
+## iOS 설정
+1. `Info.plist` 파일 수정
+```javascript
+<key>LSApplicationQueriesSchemes</key>
+<array>
+ <string>naversearchapp</string>
+ <string>naversearchthirdlogin</string>
+</array>
+```
+
+# 애플
+## 패키지 설치
+```
+yarn add @invertase/react-native-apple-authentication
+
+npx pod-install
+```
+
+## iOS 설정

@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     `gatsby-theme-material-ui`,
     `gatsby-transformer-sharp`,
     {
