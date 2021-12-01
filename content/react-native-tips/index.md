@@ -169,4 +169,7 @@ yst --reset-cache
 <string>{APP_NAME}</string>
 ```
 
-# `React.FC` VS `React`
+# ScrollView VS FlatList
+앱 개발을 하며 스크롤되는 스크린을 개발해야했는데 [React Native ScrollView](https://reactnative.dev/docs/scrollview) 문서를 보니 `FlatList`라는 것도 있다는 사실을 알게 되었습니다.  
+문서에서 소개하고 있는 내용으로는 `ScrollView`는 한꺼번에 모든 하위 구성요소를 렌더링 하기 때문에 콘텐츠가 많은 스크린의 경우 부하가 생길 수 있다고 합니다. (렌더링 속도 느려짐, 메모리 사용량 증가)  
+반면 `FlatList`는 항목이 나타나야 하는 시점에 로딩을 하고 메모리와 처리 시간을 절약하기 위해 화면에 보이지 않는 요소들은 제거한다고 합니다.
