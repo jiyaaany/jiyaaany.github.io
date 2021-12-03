@@ -53,7 +53,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build && cp googleef9f60956fe58083.html public/",
+    "build": "gatsby build && cp googleef9f60956fe58083.html public/ && cp naver081098be0c6114e95709378b83161bc1.html public/",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "deploy": "gatsby build && gh-pages -d public",
