@@ -6,14 +6,14 @@ module.exports = {
   siteMetadata: metaConfig,
 
   plugins: [
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-feed',
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-dark-mode`,
-    `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sitemap`,
     `gatsby-theme-material-ui`,
     `gatsby-transformer-sharp`,
     {
