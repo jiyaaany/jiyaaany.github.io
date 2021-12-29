@@ -6,16 +6,6 @@ module.exports = {
   siteMetadata: metaConfig,
 
   plugins: [
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-feed',
-    `gatsby-plugin-advanced-sitemap`,
-    `gatsby-plugin-dark-mode`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
-    `gatsby-theme-material-ui`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -127,9 +117,17 @@ module.exports = {
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-mathjax-ssr`,
         ],
       },
     },
+    `gatsby-theme-material-ui`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-feed`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
   ],
 };
