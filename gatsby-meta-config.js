@@ -2,7 +2,7 @@ module.exports = {
   title: `지걸이네`,
   description: `지걸이의 개발일기`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://jigeol.io`,
+  siteUrl: `https://jiyaaany.netlify.app/`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
