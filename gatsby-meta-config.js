@@ -1,6 +1,6 @@
 module.exports = {
-  title: `지걸이네`,
-  description: `지걸이의 개발일기`,
+  title: `지걸 DevLog`,
+  description: `크고 작은 것들을 기록합니다.`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://jiyaaany.netlify.app/`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
@@ -13,13 +13,13 @@ module.exports = {
   author: {
     name: `김지연`,
     bio: {
-      role: `개발자`,
-      description: ['좋은 코드를 고민하는', '배움을 즐거워하는', '재미있게 일하는'],
+      role: `FE 개발자`,
+      description: ['좋은 코드를 고민하는', '배움을 멈추지 않는', '소통하는'],
       thumbnail: 'me.png', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/jiyaaany`,
-      linkedIn: ``, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
+      linkedIn: `https://www.linkedin.com/in/%EC%A7%80%EC%97%B0-%EA%B9%80-433372228/`,
       email: `jiyaaany@gmail.com`,
     },
   },
@@ -43,8 +43,17 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        date: '2021.07 ~ ',
-        activity: '(주)쿠캣 재직중',
+        date: '2022.04 ~ ',
+        activity: '넥슨 코리아',
+        links: {
+          post: '',
+          github: '',
+          demo: '',
+        },
+      },
+      {
+        date: '2021.07 ~ 2022.04',
+        activity: '(주)쿠캣',
         links: {
           post: '',
           github: '',
@@ -53,7 +62,7 @@ module.exports = {
       },
       {
         date: '2020.06 ~ 2021.07',
-        activity: '(주)게임원커뮤니케이션주 재직',
+        activity: '(주)게임원커뮤니케이션즈',
         links: {
           post: '',
           github: '',
@@ -62,7 +71,7 @@ module.exports = {
       },
       {
         date: '2018.11 ~ 2020.05',
-        activity: '(주)코비젼 재직',
+        activity: '(주)코비젼',
         links: {
           post: '',
           github: '',
