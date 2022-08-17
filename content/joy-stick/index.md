@@ -1,10 +1,10 @@
 ---
 emoji: 😌
-title: [그리디] 프로그래머스 조이스틱 (level 2)
+title: (그리디) 프로그래머스 조이스틱 (level 2)
 date: '2022-08-15 21:50:00'
 author: 지걸
 tags: algorithm greedy
-categories: algorithm 
+categories: algorithm
 ---
 
 ```javascript
@@ -40,7 +40,7 @@ function solution(name) {
 console.log('hh', solution('JAN'));
 ```
 
-프로그래머스 그리디 코딩테스트 문제 중 조이스틱 문제이다.
+프로그래머스 그리디 코딩테스트 문제 중 `조이스틱` 문제이다.
 가장 찾기 어려웠던 포인트는 `unicodeAlphabet` 을 구하는 것인데, 기존에는 13 이라는 상수를 쓰지 않고
 어떻게든 계산식을 만들어보려고 했으나, A-Z 로 이동하는 것까지 감안해야하는 것과 단순 unicode 를 구할 경우 1의 오차가 생기는 예외들을
 처리하지 못했다.
