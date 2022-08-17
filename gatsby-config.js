@@ -30,13 +30,13 @@ module.exports = {
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
+            sitemap: 'https://jiyaaany.netlify.app/sitemap.xml',
+            host: 'https://jiyaaany.netlify.app',
           },
           'deploy-preview': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
+            sitemap: 'https://jiyaaany.netlify.app/sitemap.xml',
+            host: 'https://jiyaaany.netlify.app',
           },
         },
       },
