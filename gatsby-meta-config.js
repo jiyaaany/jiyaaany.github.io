@@ -1,5 +1,5 @@
 module.exports = {
-  title: `지걸 DevLog`,
+  title: `지걸Log`,
   description: `크고 작은 것들을 기록합니다.`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://jiyaaany.netlify.app/`,
