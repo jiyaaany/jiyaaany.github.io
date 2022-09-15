@@ -171,6 +171,16 @@ React는 Virtual DOM을 사용하기 때문에 렌더링 되는 횟수가 적어
 - arguments: arrow function은 arguments를 사용할 수 없음
 - prototype: arrow function은 prototype을 사용할 수 없음
 
+## `map()` 함수에서 index를 지양하는 이유
+우리는 컴포넌트를 반복하여 배치하거나 사용해야할 때 `map()`함수를 사용할 수 있다. 이 때 반복되는 element에
+key값을 지정해주지 않으면 관련 경고가 노출된다. 리액트 공식 문서에서는 어떤 아이템이 변경, 삭제 되었는지
+알기 위해 key props가 필요하다고 설명하고 있다.  
+리액트는 변경된 부분만 리렌더링 해주는데 배열에 요소가 추가되었을 때 key props가 없다면 마지막 요소만 추가해주면 되는 상황인데도 
+전체 배열 요소를 다시 렌더링하게 된다.  
+key 값을 `map()` 내부의 index로 지정할 경우에도 배열 전체 요소가 리렌더링 될 수 있다. 만약 배열의 첫번째 위치에
+요소가 추가된 것이라면 배열 전체의 index가 변경되기 때문이다. 그래서 고유의 id를 사용해주는 것이 가장 좋다.  
+데이터가 reordered 또는 filtered 되지 않는 상황이라면 index를 사용해도 무방하다는 의견도 있다.
+
 ## CSS-in-JS VS CSS-in-CSS
 
 ## Redux, recoil 공통점, 차이점
