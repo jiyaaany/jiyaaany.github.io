@@ -73,8 +73,5 @@ const { status, error, data } = useQuery<BlaBla, Error>(
 - `React Query`는 다시 포커스가 활성화 되었을 때 자동으로 데이터를 다시 가져옵니다. (필요에 따라 비활성화도 가능합니다.)
 - 요청 시 오류가 발생하면 최대 3번까지 자동으로 재요청합니다. 
 
-# 마치며
-전 회사에서 제품을 만들며 겪었던 문제들을 쉽게 해결할 수 있도록 도와주는 라이브러리다. (지금은 도입할 수 없지만..) 
-
 ## Refer
 > https://www.carlrippon.com/getting-started-with-react-query-and-typescript/
