@@ -27,42 +27,36 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-f72d187dc7c4e660c2f3.js"
+    "url": "webpack-runtime-eee3731a7e11fe21e3c4.js"
   },
   {
-    "url": "styles.dc85419168a01a688ebf.css"
+    "url": "styles.403d7a8a431a9dbd54c6.css"
   },
   {
-    "url": "styles-407fe62976dc5310c43e.js"
+    "url": "framework-de157c6b30d4790e4e81.js"
   },
   {
-    "url": "framework-cd3e1e804d552fa282ef.js"
-  },
-  {
-    "url": "app-3394854c7cf3f13a35ed.js"
+    "url": "app-a4ba006d81e916661c00.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b1ddbc3ce8d924cf55e5c09230cc5b20"
+    "revision": "fafd5b2613e654db3095916506db9f63"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"
-  },
-  {
-    "url": "polyfill-384ea82b9c97dbd7ee60.js"
+    "url": "polyfill-f196834924f88edde8fc.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "a8aee393e9314ed703ffdeff42fa566a"
+    "revision": "dad74214e70efa98f9bbac0f01b215a4"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -88,6 +82,24 @@ const MessageAPI = {
 
   clearPathResources: event => {
     event.waitUntil(idbKeyval.clear())
+
+    // We detected compilation hash mismatch
+    // we should clear runtime cache as data
+    // files might be out of sync and we should
+    // do fresh fetches for them
+    event.waitUntil(
+      caches.keys().then(function (keyList) {
+        return Promise.all(
+          keyList.map(function (key) {
+            if (key && key.includes(`runtime`)) {
+              return caches.delete(key)
+            }
+
+            return Promise.resolve()
+          })
+        )
+      })
+    )
   },
 
   enableOfflineShell: () => {
@@ -154,7 +166,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-3394854c7cf3f13a35ed.js`))) {
+  if (!resources || !(await caches.match(`/app-a4ba006d81e916661c00.js`))) {
     return await fetch(event.request)
   }
 
