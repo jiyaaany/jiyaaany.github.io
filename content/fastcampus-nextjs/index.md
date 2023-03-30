@@ -1,7 +1,6 @@
 ---
 emoji: 📚
 title: [패스트캠퍼스] Next.js 완전정복
-date: '2023-03-14 12:00:00'
 author: 지걸
 tags: Next.js
 categories: TIL
