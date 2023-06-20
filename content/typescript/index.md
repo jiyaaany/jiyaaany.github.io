@@ -44,6 +44,11 @@ const todo: TodoPreviw = {
 }
 ```
 
+# `infer`
+Typescript `infer` 키워드는 조건식에 따라 참일 경우 사용할 수 있다. 
+`Element<number> extends Element<infer U>`와 같은 타입이 있다고 했을 때, `U`타입은 `number`로 추론(infer)할 수 있다.  
+
+
 # 마치며
 타입스크립트를 처음 사용할 때 일일이 선언해줘야한다는 번거로움이 있었는데 여러 헬퍼타입으로 타입을 재사용할 수 있도록 발전하고 있다. 다른 헬퍼타입들도 공부해두면 여러 번 선언되는 것을 막을 수 있을 것 같다.
 
