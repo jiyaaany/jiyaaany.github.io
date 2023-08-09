@@ -1,3 +1,12 @@
+---
+emoji: 🙈
+title: nginx config 파일
+date: '2023-08-09 21:51:00'
+author: 지걸
+tags: nginx ubuntu next
+categories: TIL infra
+---
+
 ```
 #
 # You should look at the following URL's in order to grasp a solid understanding
